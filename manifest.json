@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Cookie 获取器",
+  "name": "Cookie 提取器",
   "version": "1.0",
   "description": "在用户点击插件图标时，获取当前激活标签页网站的 Cookie，并在弹窗中显示，支持复制到剪贴板。",
   "permissions": [
