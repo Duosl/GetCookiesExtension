@@ -3,94 +3,14 @@
 <head>
   <title>Cookie 获取器</title>
   <meta charset="UTF-8">
-  <style>
-    body {
-      width: 320px; /* 根据图片调整宽度 */
-      min-height: 280px;
-      padding: 10px;
-      box-sizing: border-box;
-      background-color: #ffffff; /* 浅色背景 */
-      color: #333333; /* 深色文字 */
-      display: flex;
-      flex-direction: column;
-    }
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 15px;
-    }
-    .title {
-      font-size: 18px;
-      font-weight: bold;
-      color: #007acc; /* 保持 VS Code 蓝色强调，或改为深色如 #333 */
-      display: flex;
-      align-items: center;
-    }
-    .version {
-      font-size: 12px;
-      color: #ffffff;
-      background-color: #007acc; /* 保持 VS Code 蓝色强调 */
-      padding: 2px 6px;
-      border-radius: 4px;
-      margin-left: 6px;
-    }
-    #cookieDisplay {
-      width: 100%;
-      height: 120px; /* 调整高度 */
-      margin-bottom: 15px;
-      border: 1px solid #cccccc; /* 浅色边框 */
-      padding: 8px;
-      box-sizing: border-box;
-      white-space: pre-wrap;
-      word-wrap: break-word;
-      overflow-y: auto;
-      font-size: 0.85em;
-      background-color: #ffffff; /* 白色背景 */
-      border-radius: 4px;
-      color: #333333; /* 深色文字 */
-    }
-    #copyButton {
-      width: 100%;
-      padding: 10px 15px;
-      cursor: pointer;
-      background-color: #007acc; /* VS Code 蓝色强调 */
-      color: #ffffff;
-      border: none;
-      border-radius: 8px; /* 更圆的角 */
-      font-size: 16px;
-      font-weight: bold;
-      transition: background-color 0.2s ease;
-    }
-    #copyButton:hover {
-      background-color: #005a9e; /* 悬停时深一点的蓝色 */
-    }
-    #copyButton:disabled {
-      background-color: #dddddd; /* 禁用的浅灰色背景 */
-      color: #aaaaaa; /* 禁用的深灰色文字 */
-      cursor: not-allowed;
-    }
-    #status {
-      margin-top: 10px;
-      font-size: 0.9em;
-      color: #28a745; /* 鲜明的绿色成功提示 (确保在浅色背景下可见) */
-      min-height: 1.2em;
-      text-align: center;
-    }
-    .footer {
-      margin-top: auto; /* 将footer推到底部 */
-      padding-top: 6px;
-      font-size: 0.75em;
-      color: #666666; /* 页脚的灰色文字 */
-      text-align: center;
-      border-top: 1px solid #eeeeee; /* 页脚上方的分隔线 */;
-    }
-  </style>
+  <link rel="stylesheet" href="popup.css">
 </head>
 <body>
   <div class="header">
     <span class="title">Cookie 获取器<span class="version">v1.0</span></span>
+    <button id="themeToggleBtn" class="theme-toggle-btn" title="切换主题">🎨 主题</button>
   </div>
+  <div id="themePanel" class="theme-panel"></div>
 
   <div id="cookieDisplay">正在加载 Cookies...</div>
   <button id="copyButton" disabled>复制 Cookie</button>
