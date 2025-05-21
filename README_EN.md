@@ -33,4 +33,4 @@ A simple Chrome extension to extract cookies from current website and support co
 - `icons/`: Extension icons directory
 
 ## License
-MIT
+This project uses [MIT License + Non-Commercial Use Clause](LICENSE) , for learning and personal use only, **commercial use is prohibited.** For commercial use, please contact the author for authorization.
